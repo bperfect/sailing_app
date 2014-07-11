@@ -1,0 +1,4 @@
+recursive-include sail/public *
+include sail/public/favicon.ico
+recursive-include sail/i18n *
+recursive-include sail/templates *

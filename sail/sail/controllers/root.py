@@ -7,6 +7,7 @@ from tg.exceptions import HTTPFound
 from tg import predicates
 from sail import model
 from sail.controllers.secure import SecureController
+from sail.controllers.heyhey import MainController
 from sail.model import DBSession, metadata
 from tgext.admin.tgadminconfig import BootstrapTGAdminConfig as TGAdminConfig
 from tgext.admin.controller import AdminController
@@ -33,7 +34,7 @@ class RootController(BaseController):
     """
     secc = SecureController()
     admin = AdminController(model, DBSession, config_type=TGAdminConfig)
-
+    main = MainController()
     error = ErrorController()
 
     def _before(self, *args, **kw):
